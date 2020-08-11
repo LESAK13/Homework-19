@@ -12,20 +12,14 @@ function WireCharacterCard(props) {
           <li>
             Name: {props.name}
           </li>
-          <li>
+          <li onClick={() => props.filterCharacter(props.location)} className="filter">
             Location: {props.location}
           </li>
-          <li>
+          <li onClick={() => props.sortCharacter(props.episodecount)} className="sort">
             Episode Count: {props.episodecount}
           </li>
         </ul>
       </div>
-      <button onClick={() => props.filterCharacter(props.location)} className="filter">
-        Click to Filter by Location
-      </button>
-      <button onClick={() => props.sortCharacter(props.episodecount)} className="sort">
-        Click to Sort by Episode Count
-      </button>
     </div>
   );
 }
